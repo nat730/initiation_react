@@ -1,5 +1,6 @@
 import HelloWorld from './helloWorld';
 import Counter from "./counter";
+import List from "./list";
 import './App.css';
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <div>
       <HelloWorld /> 
       <Counter />
+      <List />
     </div>
   );
 };
