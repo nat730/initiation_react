@@ -1,6 +1,7 @@
 import HelloWorld from './helloWorld';
 import Counter from "./counter";
 import List from "./list";
+import Forms from "./Forms";
 import './App.css';
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
       <HelloWorld /> 
       <Counter />
       <List />
+      <Forms />
     </div>
   );
 };
