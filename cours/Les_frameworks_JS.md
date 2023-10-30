@@ -84,16 +84,18 @@ Prof - Oui, c'est du Typescript + JSX. JSX est une extension de syntaxe pour Rea
 
 ```tsx
 import React from 'react';
-
+//soit
 const ProfName = () => {
+//ou alors
 function ProfName() {
+
     return (
         <div>
             <h1>Thomas</h1>
         </div>
     );
 };
-
+}
 export default ProfName;
 ```
 
