@@ -1,24 +1,15 @@
-import { useState, useCallback, useMemo } from 'react';
+const names = ['Thomas', 'Yoann', 'Aly', 'Jeremy'];
+const upperCaseNames = names.map((name) => name.toUpperCase())
 
-const List = (props) => {
-  const [name, setName] = useState(['Thomas', 'Yoann', 'Aly', 'Jeremy']);
+const List = () => {
 
-  const upperCaseName = useMemo(
-    () => name.map((name) => name.toUpperCase()).join(', '),
-    [name]
-  );
-
-  const handleClick = useCallback(
-    () => setName(['Thomas', 'Yoann', 'Aly', 'Jeremy']),
-    []
-  );
-
-  return (
-    <div>
-      <h1>Prénom du prof : {upperCaseName}</h1>
-      <button onClick={handleClick}>Reset</button>
-    </div>
-  );
+    return (
+        <div>
+            {upperCaseNames.map(( name, i) => {
+                return <div key={i} style={{color: i % 2 ? 'black' : 'lightblue'}}>{name}</div>
+            })}
+        </div>
+    );
 };
 
-export default List; // Export the component as List
+export default List;
