@@ -23,7 +23,6 @@ const Forms = () => {
         onChange={handleChange}
         value={enteredValue}
       />
-      <label htmlFor="Color">entrez une couleur :</label>
       <input
         type="color"
         id="Color"
