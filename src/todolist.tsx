@@ -9,23 +9,22 @@ const ToDoList = () => {
     if (savedTaches) {
       setTableau(JSON.parse(savedTaches));
     }
-    document.title = "tu as" + tableau.length + "euros"
-  }, []);
+    document.title = "tu as " + tableau.length + " euros"
+  }, [enteredValue]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEnteredValue(event.target.value);
   };
 
   const handleAddClick = () => {
+  
+     
     if (enteredValue !== "") {
       const updatedTableau = [...tableau, enteredValue];
       const tableauString = JSON.stringify(updatedTableau)
       localStorage.setItem("taches", tableauString)
       setTableau(updatedTableau);
       setEnteredValue('');
-    }
-    else {
-      alert("veuillez remplir le champ");
     }
   };
 
